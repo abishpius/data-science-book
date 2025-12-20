@@ -1,0 +1,93 @@
+/* Custom Premium Styles for Data Science Tutorial */
+
+:root {
+  --vp-c-brand-1: #3eaf7c;
+  --vp-c-brand-2: #42b983;
+  --vp-c-brand-3: #4abf8a;
+
+  /* Modern Gradients */
+  --ds-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --ds-glass: rgba(255, 255, 255, 0.1);
+  --ds-glass-border: rgba(255, 255, 255, 0.2);
+}
+
+.dark {
+  --ds-glass: rgba(0, 0, 0, 0.3);
+  --ds-glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* Glassmorphism Effect for Feature Cards */
+.VPFeature {
+  background: var(--ds-glass) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--ds-glass-border) !important;
+  border-radius: 12px !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.VPFeature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  border-color: var(--vp-c-brand-1) !important;
+}
+
+/* Hero Section Enhancement */
+.VPHero {
+  padding: 64px 24px !important;
+}
+
+.VPHero .name {
+  font-size: 56px !important;
+  line-height: 1.1 !important;
+}
+
+/* Custom TOC and Sidebar Styling */
+.VPDocAside {
+  background: var(--ds-glass);
+  border-radius: 12px;
+  padding: 16px;
+  backdrop-filter: blur(5px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc p {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Code block adjustments */
+.vp-doc [class*="language-"] {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--vp-c-brand-1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--vp-c-brand-2);
+}
