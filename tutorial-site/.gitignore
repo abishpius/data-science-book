@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+dist/
+.temp/
+.cache/
+
+# VitePress specific
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+thumbs.db
+
+# Sensitivity
+DS Book1.txt
+DS Book1.docx
+split_book.py
+find_chapters.py
+
+# Environment
+.env
+.env.local

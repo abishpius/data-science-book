@@ -1,0 +1,11 @@
+# Original Book Sources
+DS Book1.txt
+DS Book1.docx
+
+# Python helper scripts
+split_book.py
+find_chapters.py
+
+# Env
+.env
+.DS_Store
