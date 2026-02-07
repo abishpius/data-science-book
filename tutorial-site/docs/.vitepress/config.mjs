@@ -18,6 +18,7 @@ export default defineConfig({
         ]
       },
       { text: "About Author", link: "https://abishpius.github.io/Abishpius/" },
+      { text: "AWS Exam", link: "/aws-exam/index.html" },
     ],
     sidebar: [
       {

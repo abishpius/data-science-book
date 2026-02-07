@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AWS Certified Machine Learning - Specialty Practice</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark-mode">
+    <div class="background-blobs">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <header>
+      <div class="container">
+        <div class="logo">
+          <span class="aws-icon"></span>
+          <h1>AWS Exam <span>Practice</span></h1>
+        </div>
+        <div class="stats" id="quiz-stats" style="display: none">
+          <div class="stat-item">
+            <span class="label">Progress</span>
+            <span class="value" id="progress-text">0/138</span>
+          </div>
+          <div class="stat-item">
+            <span class="label">Score</span>
+            <span class="value" id="score-text">0%</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Start Screen -->
+      <section id="start-screen" class="card active">
+        <div class="hero-content">
+          <h2>Certified Machine Learning Specialty</h2>
+          <p>
+            Master the AWS MLS-C01 exam with our interactive practice portal.
+            138 high-quality questions with instant feedback.
+          </p>
+          <div class="features-grid">
+            <div class="feature">
+              <i class="icon-zap"></i>
+              <h3>Instant Feedback</h3>
+              <p>Know immediately if you're right or wrong.</p>
+            </div>
+            <div class="feature">
+              <i class="icon-image"></i>
+              <h3>Visual Learning</h3>
+              <p>Includes all technical diagrams and charts.</p>
+            </div>
+            <div class="feature">
+              <i class="icon-target"></i>
+              <h3>Smart Progress</h3>
+              <p>Track your performance as you go.</p>
+            </div>
+          </div>
+          <button id="start-btn" class="btn btn-primary btn-large">
+            Start Practice Exam
+          </button>
+        </div>
+      </section>
+
+      <!-- Quiz Screen -->
+      <section id="quiz-screen" class="quiz-container" style="display: none">
+        <div class="quiz-header">
+          <div class="progress-bar-container">
+            <div id="progress-bar" class="progress-bar"></div>
+          </div>
+          <div class="q-nav">
+            <span id="q-number">Question 1 of 138</span>
+            <div class="tags">
+              <span id="multiple-tag" class="tag" style="display: none"
+                >Multiple Choice</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="question-card card">
+          <div id="question-text" class="question-text">
+            Loading question...
+          </div>
+          <div
+            id="question-image-container"
+            class="question-image"
+            style="display: none"
+          >
+            <img id="question-image" src="" alt="Question Diagram" />
+          </div>
+          <div id="options-container" class="options-grid">
+            <!-- Options injected by JS -->
+          </div>
+        </div>
+
+        <div class="quiz-footer">
+          <button id="prev-btn" class="btn btn-secondary">Previous</button>
+          <div class="center-actions">
+            <button id="check-btn" class="btn btn-accent">Check Answer</button>
+          </div>
+          <button id="next-btn" class="btn btn-secondary">Next</button>
+        </div>
+        <div class="quiz-finish-row">
+          <button id="finish-btn" class="btn btn-danger">Finish Exam</button>
+        </div>
+      </section>
+
+      <!-- Result Screen -->
+      <section id="result-screen" class="card" style="display: none">
+        <div class="result-header">
+          <h2>Exam Summary</h2>
+          <div class="score-circle">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+              <path
+                class="circle-bg"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <path
+                id="score-circle-fill"
+                class="circle"
+                stroke-dasharray="0, 100"
+                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+              />
+              <text x="18" y="20.35" class="percentage" id="final-score-text">
+                0%
+              </text>
+            </svg>
+          </div>
+        </div>
+        <div class="result-stats">
+          <div class="result-stat">
+            <span class="label">Total Questions</span>
+            <span class="value" id="finished-total">138</span>
+          </div>
+          <div class="result-stat">
+            <span class="label">Correct Answers</span>
+            <span class="value success" id="finished-correct">0</span>
+          </div>
+          <div class="result-stat">
+            <span class="label">Accuracy</span>
+            <span class="value" id="finished-accuracy">0%</span>
+          </div>
+        </div>
+        <div class="result-actions">
+          <button id="restart-btn" class="btn btn-primary">
+            Restart Practice
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 AWS Machine Learning Specialty Practice Tool</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
